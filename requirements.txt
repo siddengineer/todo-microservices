@@ -1,0 +1,10 @@
+asgiref==3.11.1
+concurrent-log-handler==0.9.29
+Django==6.0.4
+django-cors-headers==4.9.0
+djangorestframework==3.17.1
+portalocker==3.2.0
+PyMySQL==1.1.2
+pywin32==311
+sqlparse==0.5.5
+tzdata==2026.1

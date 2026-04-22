@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - gateway_service
+      - todo_service
+
+  gateway_service:
+    build: ./gateway_service
+    container_name: gateway_service
+    restart: always
+
+  todo_service:
+    build: ./todo_service
+    container_name: todo_service
+    restart: always

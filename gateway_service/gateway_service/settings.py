@@ -24,9 +24,21 @@ SECRET_KEY = 'django-insecure-=8do9^y@h_8n5amqd5%xf@_6gdcpd+41w23_3o&^cal_&q2%d0
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'gateway_service']
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+SESSION_COOKIE_AGE = 3600
 
+
+
+
+
+SAML_AUTH = {
+    "OKTA_METADATA_URL": "https://trial-7297168.okta.com/app/exk128kcwy45P7iPV698/sso/saml/metadata",
+    "ASSERTION_URL": "http://localhost:8000/saml/acs/",
+    "ENTITY_ID": "http://localhost:8000/saml/metadata/",
+}
+ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
